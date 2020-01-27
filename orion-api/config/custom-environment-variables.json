@@ -1,0 +1,3 @@
+{
+    "password": "env_var_name_that_holds_the_password"
+}
