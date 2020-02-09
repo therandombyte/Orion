@@ -131,26 +131,34 @@ class Transactions extends Component {
           />
         </div>
         <div className="col">
-          <button
-            onClick={this.handleInProgress}
-            className="btn btn-danger btn-sm m-1"
+          <table
+            className="table borderless"
+            style={{ width: 1550, marginTop: 0 }}
           >
-            In-Progress
-          </button>
+            <tr>
+              <td>
+                <SearchBox value={searchQuery} onChange={this.handleSearch} />
+              </td>
+              <td>
+                <p>Showing {totalCount} automation transactions</p>
+              </td>
 
-          <button
-            onClick={this.handleRetrigger}
-            className="btn btn-danger btn-sm m-1"
-          >
-            Retrigger
-          </button>
-          <div className="form-group row">
-            <div className="col-xs-4">
-              <SearchBox value={searchQuery} onChange={this.handleSearch} />
-            </div>
-          </div>
-
-          <p>(Found {totalCount} automation transactions)</p>
+              <td style={{ textAlign: "right" }}>
+                <button
+                  onClick={this.handleInProgress}
+                  className="btn btn-danger btn-sm m-1"
+                >
+                  In-Progress
+                </button>
+                <button
+                  onClick={this.handleRetrigger}
+                  className="btn btn-danger btn-sm m-1"
+                >
+                  Retrigger
+                </button>
+              </td>
+            </tr>
+          </table>
 
           <TransactionsTable
             transactions={transactions}

@@ -14,9 +14,13 @@ code {
 }
 
 .navbar {
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 
 .clickable {
   cursor: pointer;
+}
+
+.form-control {
+  display: inline-block !important;
 }
